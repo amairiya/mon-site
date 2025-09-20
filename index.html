@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Motez Amairi — Cloud & Cybersecurity Consultant</title>
+  <style>
+    :root{
+      --bg:#0f1724;--card:#0b1220;--muted:#98a0b3;--accent:#6ee7b7;--glass:rgba(255,255,255,0.03);
+      --radius:12px;--maxw:1000px;--gap:20px;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+      color-scheme:dark;
+    }
+    html,body{height:100%;}
+    body{margin:0;background:linear-gradient(180deg,#071226 0%,#071428 60%);color:#e6eef8;
+      display:flex;justify-content:center;padding:32px 16px;}
+    .container{width:100%;max-width:var(--maxw);}
+    header{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:28px;}
+    .brand{display:flex;gap:12px;align-items:center;}
+    .avatar{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#60a5fa);
+      display:flex;align-items:center;justify-content:center;font-weight:700;color:#042224;box-shadow:0 6px 18px rgba(10,12,20,0.6);}
+    h1{margin:0;font-size:18px;}
+    .subtitle{margin:0;color:var(--muted);font-size:13px;}
+    nav{display:flex;gap:12px;align-items:center;}
+    .nav-link{color:var(--muted);text-decoration:none;font-size:14px;padding:8px;border-radius:8px}
+    .nav-link:hover{color:#fff;background:var(--glass);}
+    .lang-btn{background:var(--glass);border:1px solid rgba(255,255,255,0.2);color:#fff;
+      padding:6px 12px;border-radius:8px;cursor:pointer;font-size:13px;}
+    main{display:grid;grid-template-columns:1fr;gap:var(--gap);}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));
+      border-radius:var(--radius);padding:18px;box-shadow:0 6px 30px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03);}
+    .hero{display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap;}
+    .hero-left{max-width:64%;}
+    .hero h2{margin:0 0 8px;font-size:24px;}
+    .hero p{margin:0;color:var(--muted);}
+    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.02);color:var(--accent);font-weight:600;margin-top:12px;font-size:13px}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+    .service-title{font-weight:700;margin-bottom:8px;}
+    .service-desc{color:var(--muted);font-size:14px;margin:0;}
+    .projects{display:flex;flex-direction:column;gap:12px;}
+    .project{display:flex;gap:12px;align-items:flex-start;}
+    .project .dot{width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,0.04);display:flex;align-items:center;justify-content:center;font-weight:700;}
+    footer{color:var(--muted);font-size:13px;padding-top:18px;text-align:center}
+    @media(max-width:820px){.hero-left{max-width:100%;}.grid{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="avatar"><img src="profile-pic (3).png" alt="Motez Amairi" style="width:100%;height:100%;border-radius:12px;object-fit:cover;"></div>
+        <div>
+          <h1>Motez Amairi</h1>
+          <p class="subtitle" id="role"></p>
+        </div>
+      </div>
+      <nav>
+        <a class="nav-link" href="#about" id="nav-about"></a>
+        <a class="nav-link" href="#blogs" id="nav-blogs"></a>
+        <a class="nav-link" href="#services" id="nav-services"></a>
+        <a class="nav-link" href="#contact" id="nav-contact"></a>
+        <button class="lang-btn" onclick="toggleLang()">FR</button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="card hero">
+        <div class="hero-left">
+          <h2 id="hero-title"></h2>
+          <p id="hero-desc"></p>
+          <div class="badge" id="hero-badge"></div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="card" id="about">
+        <h3 id="about-title"></h3>
+        <p id="about-1"></p>
+        <p id="about-2"></p>
+      </section>
+
+      <!-- BLOGS -->
+      <section class="card" id="blogs">
+        <h3 id="blogs-title"></h3>
+        <div class="projects">
+          <div class="project"><div class="dot">1</div><div><a href="https://github.com/amairiya/Python-based-Endpoint-Detection-and-Response-Application" target="_blank" id="blog1"></a></div></div>
+          <div class="project"><div class="dot">2</div><div><a href="https://medium.com/@amairi.moatez777/keycloak-recovery-for-access-ff6ddc3a0afb" target="_blank" id="blog2"></a></div></div>
+          <div class="project"><div class="dot">3</div><div><a href="https://medium.com/@amairi.moatez777/building-a-customized-keycloak-image-for-your-iam-solution-82e74f5518d4" target="_blank" id="blog3"></a></div></div>
+          <div class="project"><div class="dot">4</div><div><a href="https://medium.com/@amairi.moatez777/malware-demo-exploration-7c37b5115cf9" target="_blank" id="blog4"></a></div></div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section class="card" id="services">
+        <h3 id="services-title"></h3>
+        <div class="grid">
+          <div><div class="service-title" id="srv1-title"></div><p class="service-desc" id="srv1-desc"></p></div>
+          <div><div class="service-title" id="srv2-title"></div><p class="service-desc" id="srv2-desc"></p></div>
+          <div><div class="service-title" id="srv3-title"></div><p class="service-desc" id="srv3-desc"></p></div>
+          <div><div class="service-title" id="srv4-title"></div><p class="service-desc" id="srv4-desc"></p></div>
+          <div style="grid-column:1/-1"><div class="service-title" id="srv5-title"></div><p class="service-desc" id="srv5-desc"></p></div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="card" id="contact">
+        <h3 id="contact-title"></h3>
+        <p><strong id="contact-location-label"></strong> <span id="contact-location"></span></p>
+        <p><strong>Email:</strong> <a href="mailto:contact.mamairi@gmail.com">contact.mamairi@gmail.com</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/m-amairi" target="_blank">linkedin.com/in/m-amairi</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/amairiya" target="_blank">github.com/amairiya</a></p>
+      </section>
+
+      <footer>
+        <p>© <span id="year"></span> Motez Amairi</p>
+        <p id="footer-note"></p>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const texts = {
+      en:{
+        role:"Cloud & DevSecOps Security Specialist",
+        nav:{about:"About",blogs:"Blogs",services:"Services",contact:"Contact"},
+        hero:{title:"Helping businesses secure their infrastructure and applications",desc:"Specialized in IAM, Cloud Security, DevSecOps automation, and microservices protection.",badge:"Certified: Security+ • HashiCorp Vault Associate"},
+        aboutTitle:"About Me",
+        about1:"I am a Cloud Security and DevSecOps specialist. I work with companies to secure their infrastructure, protect data, and strengthen application and microservices security.",
+        about2:"My journey began with embedded systems and real-time tech, then moved into software development and application security. This allows me to approach security holistically — from infrastructure to code.",
+        blogsTitle:"My Blogs",
+        blog1:"Python-based Endpoint Detection & Response",
+        blog2:"Keycloak Recovery for Access",
+        blog3:"Building a Customized Keycloak Image",
+        blog4:"Malware Demo Exploration",
+        servicesTitle:"Services",
+        srv1:{title:"🔐 IAM & SSO",desc:"Implement MFA, SSO, API security and streamline authentication flows."},
+        srv2:{title:"☁️ Cloud Security",desc:"AWS security posture audits, remediation and continuous monitoring."},
+        srv3:{title:"⚙️ DevSecOps",desc:"Automated scans, IaC checks and secure CI/CD pipelines."},
+        srv4:{title:"🛡️ Application Security",desc:"Container/Kubernetes hardening, secrets management and policies."},
+        srv5:{title:"📊 Audit & Compliance",desc:"Reports, dashboards and prioritized remediation strategies."},
+        contactTitle:"Contact Me",
+        contactLocationLabel:"Location:",
+        contactLocation:"Quebec, Canada",
+        footerNote:"Use all code & security tools responsibly and ethically."
+      },
+      fr:{
+        role:"Spécialiste en sécurité Cloud & DevSecOps",
+        nav:{about:"À propos",blogs:"Blogs",services:"Services",contact:"Contact"},
+        hero:{title:"J’aide les entreprises à sécuriser leurs infrastructures et leurs applications",desc:"Spécialisé en IAM, sécurité cloud, automatisation DevSecOps et protection des microservices.",badge:"Certifié : Security+ • HashiCorp Vault Associate"},
+        aboutTitle:"À propos",
+        about1:"Je suis spécialiste en sécurité Cloud et DevSecOps. J’accompagne les entreprises dans la sécurisation de leurs infrastructures, la protection des données et la sécurité des applications et microservices.",
+        about2:"Mon parcours a commencé par les systèmes embarqués et le temps réel, puis s’est orienté vers le développement logiciel et la sécurité applicative. Cette expérience me permet d’aborder la sécurité de manière globale — de l’infrastructure au code.",
+        blogsTitle:"Mes Blogs",
+        blog1:"Application EDR en Python",
+        blog2:"Récupération d’accès Keycloak",
+        blog3:"Construire une image Keycloak personnalisée",
+        blog4:"Exploration de démo de malware",
+        servicesTitle:"Mes Services",
+        srv1:{title:"🔐 IAM & SSO",desc:"Mise en place du MFA, SSO, sécurisation des API et optimisation des accès."},
+        srv2:{title:"☁️ Sécurité Cloud",desc:"Audits de posture AWS, remédiations et surveillance continue."},
+        srv3:{title:"⚙️ DevSecOps",desc:"Analyses automatisées, vérification IaC et pipelines CI/CD sécurisés."},
+        srv4:{title:"🛡️ Sécurité Applicative",desc:"Durcissement de conteneurs/Kubernetes, gestion des secrets et politiques de sécurité."},
+        srv5:{title:"📊 Audit & Conformité",desc:"Rapports, tableaux de bord et recommandations prioritaires."},
+        contactTitle:"Contactez-moi",
+        contactLocationLabel:"Localisation :",
+        contactLocation:"Québec, Canada",
+        footerNote:"Utilisez tous les outils et scripts de sécurité de manière responsable et éthique."
+      }
+    };
+
+    let currentLang="en";
+    function setLang(lang){
+      const t=texts[lang];
+      currentLang=lang;
+      document.getElementById("role").textContent=t.role;
+      document.getElementById("nav-about").textContent=t.nav.about;
+      document.getElementById("nav-blogs").textContent=t.nav.blogs;
+      document.getElementById("nav-services").textContent=t.nav.services;
+      document.getElementById("nav-contact").textContent=t.nav.contact;
+      document.getElementById("hero-title").textContent=t.hero.title;
+      document.getElementById("hero-desc").textContent=t.hero.desc;
+      document.getElementById("hero-badge").textContent=t.hero.badge;
+      document.getElementById("about-title").textContent=t.aboutTitle;
+      document.getElementById("about-1").textContent=t.about1;
+      document.getElementById("about-2").textContent=t.about2;
+      document.getElementById("blogs-title").textContent=t.blogsTitle;
+      document.getElementById("blog1").textContent=t.blog1;
+      document.getElementById("blog2").textContent=t.blog2;
+      document.getElementById("blog3").textContent=t.blog3;
+      document.getElementById("blog4").textContent=t.blog4;
+      document.getElementById("services-title").textContent=t.servicesTitle;
+      document.getElementById("srv1-title").textContent=t.srv1.title;
+      document.getElementById("srv1-desc").textContent=t.srv1.desc;
+      document.getElementById("srv2-title").textContent=t.srv2.title;
+      document.getElementById("srv2-desc").textContent=t.srv2.desc;
+      document.getElementById("srv3-title").textContent=t.srv3.title;
+      document.getElementById("srv3-desc").textContent=t.srv3.desc;
+      document.getElementById("srv4-title").textContent=t.srv4.title;
+      document.getElementById("srv4-desc").textContent=t.srv4.desc;
+      document.getElementById("srv5-title").textContent=t.srv5.title;
+      document.getElementById("srv5-desc").textContent=t.srv5.desc;
+      document.getElementById("contact-title").textContent=t.contactTitle;
+      document.getElementById("contact-location-label").textContent=t.contactLocationLabel;
+      document.getElementById("contact-location").textContent=t.contactLocation;
+      document.getElementById("footer-note").textContent=t.footerNote;
+      document.querySelector(".lang-btn").textContent=lang==="en"?"FR":"EN";
+    }
+
+    function toggleLang(){
+      setLang(currentLang==="en"?"fr":"en");
+    }
+
+    // Initial load
+    setLang("en");
+  </script>
+</body>
+</html>
